@@ -1,4 +1,4 @@
-﻿/*
+/*
  * Creado por SharpDevelop.
  * Usuario: CC1_PC44
  * Fecha: 10/12/2025
@@ -19,14 +19,7 @@ namespace login
 	{
 		public Masa()
 		{
-			//
-			// The InitializeComponent() call is required for Windows Forms designer support.
-			//
 			InitializeComponent();
-			
-			//
-			// TODO: Add constructor code after the InitializeComponent() call.
-			//
 		}
 		
 		void BtnRegresarClick(object sender, EventArgs e)
@@ -38,9 +31,9 @@ namespace login
 		
 		void BtnCalcularClick(object sender, EventArgs e)
 		{
-			 double kg = double.Parse(txtKilogramos.Text);
-   			 double libras = kg * 2.20462;
-    		lblResultado.Text = libras.ToString("0.00");
+			double kg = double.Parse(txtKilogramos.Text);
+			double libras = kg * 2.20462;
+			lblResultado.Text = libras.ToString("0.00");
 		}
 	}
 }

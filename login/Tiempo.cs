@@ -1,4 +1,4 @@
-﻿/*
+/*
  * Creado por SharpDevelop.
  * Usuario: CC1_PC44
  * Fecha: 10/12/2025
@@ -35,12 +35,13 @@ namespace login
 			FormularioPrincipal.Show();
 			this.Hide();
 		}
-		
+
+		// Método final de Dylan (sin conflictos)
 		void BtnCalcularClick(object sender, EventArgs e)
 		{
 			double s = double.Parse(txtSegundos.Text);
     		double horas = s / 3600;
-   		    lblResultado.Text = horas.ToString("0.00");
+    		lblResultado.Text = horas.ToString("0.00");
 		}
 	}
 }

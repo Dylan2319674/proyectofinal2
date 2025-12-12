@@ -1,4 +1,4 @@
-﻿/*
+/*
  * Creado por SharpDevelop.
  * Usuario: CC1_PC44
  * Fecha: 10/12/2025
@@ -113,6 +113,7 @@ namespace login
 			this.ResumeLayout(false);
 			this.PerformLayout();
 		}
+
 		private System.Windows.Forms.Label label1;
 		private System.Windows.Forms.Label label2;
 		private System.Windows.Forms.Label lblResultado;
