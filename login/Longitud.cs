@@ -35,5 +35,12 @@ namespace login
 			FormularioPrincipal.Show();
 			this.Hide();
 		}
+		
+		void BtnCalcularClick(object sender, EventArgs e)
+		{
+			double km = double.Parse(txtKilometros.Text);
+    		double millas = km * 0.621371;
+    		lblResultado.Text = millas.ToString("0.00");
+		}
 	}
 }

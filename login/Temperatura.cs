@@ -35,5 +35,12 @@ namespace login
 			FormularioPrincipal.Show();
 			this.Hide();
 		}
+		
+		void BtnCalcularClick(object sender, EventArgs e)
+		{
+			double c = double.Parse(txtCelcius.Text);
+    		double f = (c * 9.0 / 5.0) + 32;
+   		    lblResultado.Text = f.ToString("0.00");
+		}
 	}
 }
