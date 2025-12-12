@@ -35,5 +35,12 @@ namespace login
 			FormularioPrincipal.Show();
 			this.Hide();
 		}
+		
+		void BtnConvertirClick(object sender, EventArgs e)
+		{
+			double s = double.Parse(txtSegundos.Text);
+    		double horas = s / 3600;
+    		lblResultado.Text = horas.ToString("0.00");
+		}
 	}
 }
