@@ -36,6 +36,7 @@ namespace login
 		/// </summary>
 		private void InitializeComponent()
 		{
+			this.components = new System.ComponentModel.Container();
 			this.btnRegresar = new System.Windows.Forms.Button();
 			this.BtnSalir = new System.Windows.Forms.Button();
 			this.dtpFecha = new System.Windows.Forms.DateTimePicker();
@@ -60,8 +61,10 @@ namespace login
 			this.LblPuesto = new System.Windows.Forms.Label();
 			this.LblNombreEmpleado = new System.Windows.Forms.Label();
 			this.LblCodigoEmpleado = new System.Windows.Forms.Label();
+			this.errorProvider1 = new System.Windows.Forms.ErrorProvider(this.components);
 			((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
 			((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
+			((System.ComponentModel.ISupportInitialize)(this.errorProvider1)).BeginInit();
 			this.SuspendLayout();
 			// 
 			// btnRegresar
@@ -72,13 +75,12 @@ namespace login
 			this.btnRegresar.TabIndex = 0;
 			this.btnRegresar.Text = "Regresar";
 			this.btnRegresar.UseVisualStyleBackColor = true;
-			this.btnRegresar.Click += new System.EventHandler(this.BtnRegresarClick);
 			// 
 			// BtnSalir
 			// 
 			this.BtnSalir.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(128)))), ((int)(((byte)(255)))), ((int)(((byte)(255)))));
 			this.BtnSalir.Location = new System.Drawing.Point(429, 436);
-			this.BtnSalir.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+			this.BtnSalir.Margin = new System.Windows.Forms.Padding(2);
 			this.BtnSalir.Name = "BtnSalir";
 			this.BtnSalir.Size = new System.Drawing.Size(86, 43);
 			this.BtnSalir.TabIndex = 37;
@@ -92,7 +94,7 @@ namespace login
 			this.dtpFecha.CalendarTitleBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(128)))), ((int)(((byte)(128)))), ((int)(((byte)(255)))));
 			this.dtpFecha.Font = new System.Drawing.Font("Microsoft Sans Serif", 7.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
 			this.dtpFecha.Location = new System.Drawing.Point(167, 173);
-			this.dtpFecha.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+			this.dtpFecha.Margin = new System.Windows.Forms.Padding(2);
 			this.dtpFecha.Name = "dtpFecha";
 			this.dtpFecha.Size = new System.Drawing.Size(228, 19);
 			this.dtpFecha.TabIndex = 36;
@@ -107,12 +109,11 @@ namespace login
 									this.Fecha,
 									this.Sexo});
 			this.dataGridView1.Location = new System.Drawing.Point(9, 251);
-			this.dataGridView1.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+			this.dataGridView1.Margin = new System.Windows.Forms.Padding(2);
 			this.dataGridView1.Name = "dataGridView1";
 			this.dataGridView1.RowTemplate.Height = 24;
 			this.dataGridView1.Size = new System.Drawing.Size(583, 146);
 			this.dataGridView1.TabIndex = 35;
-			this.dataGridView1.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.DataGridView1CellContentClick);
 			// 
 			// Codigo
 			// 
@@ -144,7 +145,7 @@ namespace login
 			this.BtnEliminar.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(128)))), ((int)(((byte)(255)))), ((int)(((byte)(255)))));
 			this.BtnEliminar.Font = new System.Drawing.Font("Microsoft Tai Le", 7.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
 			this.BtnEliminar.Location = new System.Drawing.Point(308, 436);
-			this.BtnEliminar.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+			this.BtnEliminar.Margin = new System.Windows.Forms.Padding(2);
 			this.BtnEliminar.Name = "BtnEliminar";
 			this.BtnEliminar.Size = new System.Drawing.Size(86, 43);
 			this.BtnEliminar.TabIndex = 34;
@@ -157,7 +158,7 @@ namespace login
 			this.BtnLimpiar.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(128)))), ((int)(((byte)(255)))), ((int)(((byte)(255)))));
 			this.BtnLimpiar.Font = new System.Drawing.Font("Microsoft Tai Le", 7.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
 			this.BtnLimpiar.Location = new System.Drawing.Point(196, 436);
-			this.BtnLimpiar.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+			this.BtnLimpiar.Margin = new System.Windows.Forms.Padding(2);
 			this.BtnLimpiar.Name = "BtnLimpiar";
 			this.BtnLimpiar.Size = new System.Drawing.Size(86, 43);
 			this.BtnLimpiar.TabIndex = 33;
@@ -170,7 +171,7 @@ namespace login
 			this.BtnGuardar.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(128)))), ((int)(((byte)(255)))), ((int)(((byte)(255)))));
 			this.BtnGuardar.Font = new System.Drawing.Font("Microsoft Tai Le", 7.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
 			this.BtnGuardar.Location = new System.Drawing.Point(75, 436);
-			this.BtnGuardar.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+			this.BtnGuardar.Margin = new System.Windows.Forms.Padding(2);
 			this.BtnGuardar.Name = "BtnGuardar";
 			this.BtnGuardar.Size = new System.Drawing.Size(86, 43);
 			this.BtnGuardar.TabIndex = 32;
@@ -183,7 +184,7 @@ namespace login
 			this.BtnActualizar.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(128)))), ((int)(((byte)(255)))), ((int)(((byte)(255)))));
 			this.BtnActualizar.Font = new System.Drawing.Font("Microsoft Tai Le", 7.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
 			this.BtnActualizar.Location = new System.Drawing.Point(444, 207);
-			this.BtnActualizar.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+			this.BtnActualizar.Margin = new System.Windows.Forms.Padding(2);
 			this.BtnActualizar.Name = "BtnActualizar";
 			this.BtnActualizar.Size = new System.Drawing.Size(71, 39);
 			this.BtnActualizar.TabIndex = 31;
@@ -196,7 +197,7 @@ namespace login
 			this.Btnquitar.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(128)))), ((int)(((byte)(255)))), ((int)(((byte)(255)))));
 			this.Btnquitar.Font = new System.Drawing.Font("Microsoft Tai Le", 7.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
 			this.Btnquitar.Location = new System.Drawing.Point(522, 207);
-			this.Btnquitar.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+			this.Btnquitar.Margin = new System.Windows.Forms.Padding(2);
 			this.Btnquitar.Name = "Btnquitar";
 			this.Btnquitar.Size = new System.Drawing.Size(71, 39);
 			this.Btnquitar.TabIndex = 30;
@@ -207,12 +208,13 @@ namespace login
 			// pictureBox1
 			// 
 			this.pictureBox1.Location = new System.Drawing.Point(444, 14);
-			this.pictureBox1.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+			this.pictureBox1.Margin = new System.Windows.Forms.Padding(2);
 			this.pictureBox1.Name = "pictureBox1";
 			this.pictureBox1.Size = new System.Drawing.Size(149, 176);
 			this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
 			this.pictureBox1.TabIndex = 29;
 			this.pictureBox1.TabStop = false;
+			this.pictureBox1.Click += new System.EventHandler(this.PictureBox1Click);
 			// 
 			// cmbSexo
 			// 
@@ -224,7 +226,7 @@ namespace login
 									"Mujer ",
 									"Otro"});
 			this.cmbSexo.Location = new System.Drawing.Point(167, 218);
-			this.cmbSexo.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+			this.cmbSexo.Margin = new System.Windows.Forms.Padding(2);
 			this.cmbSexo.Name = "cmbSexo";
 			this.cmbSexo.Size = new System.Drawing.Size(92, 21);
 			this.cmbSexo.TabIndex = 28;
@@ -269,7 +271,7 @@ namespace login
 									"",
 									""});
 			this.cmbPuesto.Location = new System.Drawing.Point(167, 113);
-			this.cmbPuesto.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+			this.cmbPuesto.Margin = new System.Windows.Forms.Padding(2);
 			this.cmbPuesto.Name = "cmbPuesto";
 			this.cmbPuesto.Size = new System.Drawing.Size(92, 21);
 			this.cmbPuesto.TabIndex = 25;
@@ -279,7 +281,7 @@ namespace login
 			this.TxtNombre.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(128)))), ((int)(((byte)(128)))), ((int)(((byte)(255)))));
 			this.TxtNombre.Font = new System.Drawing.Font("Microsoft Sans Serif", 7.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(178)));
 			this.TxtNombre.Location = new System.Drawing.Point(167, 57);
-			this.TxtNombre.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+			this.TxtNombre.Margin = new System.Windows.Forms.Padding(2);
 			this.TxtNombre.Name = "TxtNombre";
 			this.TxtNombre.Size = new System.Drawing.Size(228, 19);
 			this.TxtNombre.TabIndex = 24;
@@ -289,7 +291,7 @@ namespace login
 			this.TxtCodigoEmpleado.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(128)))), ((int)(((byte)(128)))), ((int)(((byte)(255)))));
 			this.TxtCodigoEmpleado.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
 			this.TxtCodigoEmpleado.Location = new System.Drawing.Point(167, 14);
-			this.TxtCodigoEmpleado.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+			this.TxtCodigoEmpleado.Margin = new System.Windows.Forms.Padding(2);
 			this.TxtCodigoEmpleado.Name = "TxtCodigoEmpleado";
 			this.TxtCodigoEmpleado.Size = new System.Drawing.Size(228, 21);
 			this.TxtCodigoEmpleado.TabIndex = 23;
@@ -327,6 +329,10 @@ namespace login
 			this.LblCodigoEmpleado.TabIndex = 20;
 			this.LblCodigoEmpleado.Text = "Codigo del empleado";
 			// 
+			// errorProvider1
+			// 
+			this.errorProvider1.ContainerControl = this;
+			// 
 			// Empleados
 			// 
 			this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -354,9 +360,9 @@ namespace login
 			this.Controls.Add(this.btnRegresar);
 			this.Name = "Empleados";
 			this.Text = "Empleados";
-			this.Load += new System.EventHandler(this.EmpleadosLoad);
 			((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).EndInit();
 			((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
+			((System.ComponentModel.ISupportInitialize)(this.errorProvider1)).EndInit();
 			this.ResumeLayout(false);
 			this.PerformLayout();
 		}
