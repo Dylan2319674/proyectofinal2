@@ -43,7 +43,6 @@ namespace login
 			this.btnCalcular = new System.Windows.Forms.Button();
 			this.lblResultado = new System.Windows.Forms.Label();
 			this.pictureBox1 = new System.Windows.Forms.PictureBox();
-			this.button1 = new System.Windows.Forms.Button();
 			((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
 			this.SuspendLayout();
 			// 
@@ -102,22 +101,12 @@ namespace login
 			this.pictureBox1.TabIndex = 5;
 			this.pictureBox1.TabStop = false;
 			// 
-			// button1
-			// 
-			this.button1.Location = new System.Drawing.Point(24, 94);
-			this.button1.Name = "button1";
-			this.button1.Size = new System.Drawing.Size(75, 23);
-			this.button1.TabIndex = 6;
-			this.button1.Text = "button1";
-			this.button1.UseVisualStyleBackColor = true;
-			// 
 			// Cuadrado
 			// 
 			this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
 			this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
 			this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(255)))), ((int)(((byte)(192)))));
 			this.ClientSize = new System.Drawing.Size(284, 261);
-			this.Controls.Add(this.button1);
 			this.Controls.Add(this.pictureBox1);
 			this.Controls.Add(this.lblResultado);
 			this.Controls.Add(this.btnCalcular);
@@ -130,7 +119,6 @@ namespace login
 			this.ResumeLayout(false);
 			this.PerformLayout();
 		}
-		private System.Windows.Forms.Button button1;
 		private System.Windows.Forms.PictureBox pictureBox1;
 		private System.Windows.Forms.Label lblResultado;
 		private System.Windows.Forms.Button btnCalcular;
