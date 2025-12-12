@@ -1,4 +1,4 @@
-﻿/*
+/*
  * Creado por SharpDevelop.
  * Usuario: CC1_PC44
  * Fecha: 10/12/2025
@@ -35,8 +35,9 @@ namespace login
 			FormularioPrincipal.Show();
 			this.Hide();
 		}
-		
-		void BtnConvertirClick(object sender, EventArgs e)
+
+		// Método final de Dylan (sin conflictos)
+		void BtnCalcularClick(object sender, EventArgs e)
 		{
 			double s = double.Parse(txtSegundos.Text);
     		double horas = s / 3600;

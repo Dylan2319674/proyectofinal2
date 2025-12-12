@@ -1,4 +1,4 @@
-﻿/*
+/*
  * Creado por SharpDevelop.
  * Usuario: CC1_PC44
  * Fecha: 10/12/2025
@@ -19,14 +19,7 @@ namespace login
 	{
 		public Temperatura()
 		{
-			//
-			// The InitializeComponent() call is required for Windows Forms designer support.
-			//
 			InitializeComponent();
-			
-			//
-			// TODO: Add constructor code after the InitializeComponent() call.
-			//
 		}
 		
 		void BtnRegresarClick(object sender, EventArgs e)
@@ -36,22 +29,11 @@ namespace login
 			this.Hide();
 		}
 		
-		void BtnConvertirClick(object sender, EventArgs e)
+		void BtnCalcularClick(object sender, EventArgs e)
 		{
-			double c, f;
-
-
-    	if (double.TryParse(TxtCelsius.Text, out c))
-    	{
-
-       	 f = (c * 9.0 / 5.0) + 32;
-
-        	lblResultado.Text = f.ToString("0.00");
-    	}
-    	else
-    	{
-       		 MessageBox.Show("Ingresa un valor numérico válido.");
-    	}
+			double c = double.Parse(txtCelcius.Text);
+    		double f = (c * 9.0 / 5.0) + 32;
+   		    lblResultado.Text = f.ToString("0.00");
 		}
 	}
 }

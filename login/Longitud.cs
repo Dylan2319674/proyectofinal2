@@ -1,4 +1,4 @@
-﻿/*
+/*
  * Creado por SharpDevelop.
  * Usuario: CC1_PC44
  * Fecha: 10/12/2025
@@ -19,14 +19,7 @@ namespace login
 	{
 		public Longitud()
 		{
-			//
-			// The InitializeComponent() call is required for Windows Forms designer support.
-			//
 			InitializeComponent();
-			
-			//
-			// TODO: Add constructor code after the InitializeComponent() call.
-			//
 		}
 		
 		void BtnRegresarClick(object sender, EventArgs e)
@@ -36,22 +29,10 @@ namespace login
 			this.Hide();
 		}
 		
-		void BtnConvertirClick(object sender, EventArgs e)
+		void BtnCalcularClick(object sender, EventArgs e)
 		{
-				double km, millas;
-
-   
-    if (double.TryParse(TxtKilometros.Text, out km))
-    {
-        
-        millas = km * 0.621371;
-
-        lblResultado.Text = millas.ToString("0.00");
-    }
-    else
-    {
-        MessageBox.Show("Ingresa un valor numérico válido.");
-    }
+			double km = double.Parse(txtKilometros.Text);
+			double millas = km * 0.621371;
+			lblResultado.Text = millas.ToString("0.00");
 		}
 	}
-}
