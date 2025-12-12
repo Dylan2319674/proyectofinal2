@@ -41,10 +41,9 @@ namespace login
 			// 
 			// btnRegresar
 			// 
-			this.btnRegresar.Location = new System.Drawing.Point(343, 344);
-			this.btnRegresar.Margin = new System.Windows.Forms.Padding(4);
+			this.btnRegresar.Location = new System.Drawing.Point(110, 87);
 			this.btnRegresar.Name = "btnRegresar";
-			this.btnRegresar.Size = new System.Drawing.Size(100, 28);
+			this.btnRegresar.Size = new System.Drawing.Size(75, 23);
 			this.btnRegresar.TabIndex = 1;
 			this.btnRegresar.Text = "Regresar";
 			this.btnRegresar.UseVisualStyleBackColor = true;
@@ -52,10 +51,11 @@ namespace login
 			// 
 			// Boleta
 			// 
-			this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
+			this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
 			this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-			this.ClientSize = new System.Drawing.Size(502, 447);
+			this.ClientSize = new System.Drawing.Size(267, 153);
 			this.Controls.Add(this.btnRegresar);
+			this.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
 			this.Name = "Boleta";
 			this.Text = "Boleta";
 			this.ResumeLayout(false);

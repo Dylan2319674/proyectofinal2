@@ -66,10 +66,9 @@ namespace login
 			// 
 			// btnRegresar
 			// 
-			this.btnRegresar.Location = new System.Drawing.Point(752, 537);
-			this.btnRegresar.Margin = new System.Windows.Forms.Padding(4);
+			this.btnRegresar.Location = new System.Drawing.Point(558, 456);
 			this.btnRegresar.Name = "btnRegresar";
-			this.btnRegresar.Size = new System.Drawing.Size(100, 28);
+			this.btnRegresar.Size = new System.Drawing.Size(75, 23);
 			this.btnRegresar.TabIndex = 0;
 			this.btnRegresar.Text = "Regresar";
 			this.btnRegresar.UseVisualStyleBackColor = true;
@@ -78,9 +77,10 @@ namespace login
 			// BtnSalir
 			// 
 			this.BtnSalir.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(128)))), ((int)(((byte)(255)))), ((int)(((byte)(255)))));
-			this.BtnSalir.Location = new System.Drawing.Point(572, 537);
+			this.BtnSalir.Location = new System.Drawing.Point(429, 436);
+			this.BtnSalir.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
 			this.BtnSalir.Name = "BtnSalir";
-			this.BtnSalir.Size = new System.Drawing.Size(115, 53);
+			this.BtnSalir.Size = new System.Drawing.Size(86, 43);
 			this.BtnSalir.TabIndex = 37;
 			this.BtnSalir.Text = "Salir";
 			this.BtnSalir.UseVisualStyleBackColor = false;
@@ -90,10 +90,11 @@ namespace login
 			// 
 			this.dtpFecha.CalendarMonthBackground = System.Drawing.Color.White;
 			this.dtpFecha.CalendarTitleBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(128)))), ((int)(((byte)(128)))), ((int)(((byte)(255)))));
-			this.dtpFecha.Font = new System.Drawing.Font("Calisto MT", 7.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-			this.dtpFecha.Location = new System.Drawing.Point(223, 213);
+			this.dtpFecha.Font = new System.Drawing.Font("Microsoft Sans Serif", 7.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+			this.dtpFecha.Location = new System.Drawing.Point(167, 173);
+			this.dtpFecha.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
 			this.dtpFecha.Name = "dtpFecha";
-			this.dtpFecha.Size = new System.Drawing.Size(302, 23);
+			this.dtpFecha.Size = new System.Drawing.Size(228, 19);
 			this.dtpFecha.TabIndex = 36;
 			// 
 			// dataGridView1
@@ -105,10 +106,11 @@ namespace login
 									this.Puesto,
 									this.Fecha,
 									this.Sexo});
-			this.dataGridView1.Location = new System.Drawing.Point(12, 309);
+			this.dataGridView1.Location = new System.Drawing.Point(9, 251);
+			this.dataGridView1.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
 			this.dataGridView1.Name = "dataGridView1";
 			this.dataGridView1.RowTemplate.Height = 24;
-			this.dataGridView1.Size = new System.Drawing.Size(777, 180);
+			this.dataGridView1.Size = new System.Drawing.Size(583, 146);
 			this.dataGridView1.TabIndex = 35;
 			this.dataGridView1.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.DataGridView1CellContentClick);
 			// 
@@ -141,11 +143,12 @@ namespace login
 			// 
 			this.BtnEliminar.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(128)))), ((int)(((byte)(255)))), ((int)(((byte)(255)))));
 			this.BtnEliminar.Font = new System.Drawing.Font("Microsoft Tai Le", 7.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-			this.BtnEliminar.Location = new System.Drawing.Point(410, 537);
+			this.BtnEliminar.Location = new System.Drawing.Point(308, 436);
+			this.BtnEliminar.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
 			this.BtnEliminar.Name = "BtnEliminar";
-			this.BtnEliminar.Size = new System.Drawing.Size(115, 53);
+			this.BtnEliminar.Size = new System.Drawing.Size(86, 43);
 			this.BtnEliminar.TabIndex = 34;
-			this.BtnEliminar.Text = "Elimianar";
+			this.BtnEliminar.Text = "Eliminar";
 			this.BtnEliminar.UseVisualStyleBackColor = false;
 			this.BtnEliminar.Click += new System.EventHandler(this.BtnEliminarClick);
 			// 
@@ -153,9 +156,10 @@ namespace login
 			// 
 			this.BtnLimpiar.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(128)))), ((int)(((byte)(255)))), ((int)(((byte)(255)))));
 			this.BtnLimpiar.Font = new System.Drawing.Font("Microsoft Tai Le", 7.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-			this.BtnLimpiar.Location = new System.Drawing.Point(262, 537);
+			this.BtnLimpiar.Location = new System.Drawing.Point(196, 436);
+			this.BtnLimpiar.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
 			this.BtnLimpiar.Name = "BtnLimpiar";
-			this.BtnLimpiar.Size = new System.Drawing.Size(115, 53);
+			this.BtnLimpiar.Size = new System.Drawing.Size(86, 43);
 			this.BtnLimpiar.TabIndex = 33;
 			this.BtnLimpiar.Text = "Lmpiar";
 			this.BtnLimpiar.UseVisualStyleBackColor = false;
@@ -165,9 +169,10 @@ namespace login
 			// 
 			this.BtnGuardar.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(128)))), ((int)(((byte)(255)))), ((int)(((byte)(255)))));
 			this.BtnGuardar.Font = new System.Drawing.Font("Microsoft Tai Le", 7.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-			this.BtnGuardar.Location = new System.Drawing.Point(100, 537);
+			this.BtnGuardar.Location = new System.Drawing.Point(75, 436);
+			this.BtnGuardar.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
 			this.BtnGuardar.Name = "BtnGuardar";
-			this.BtnGuardar.Size = new System.Drawing.Size(115, 53);
+			this.BtnGuardar.Size = new System.Drawing.Size(86, 43);
 			this.BtnGuardar.TabIndex = 32;
 			this.BtnGuardar.Text = "Guardar";
 			this.BtnGuardar.UseVisualStyleBackColor = false;
@@ -177,9 +182,10 @@ namespace login
 			// 
 			this.BtnActualizar.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(128)))), ((int)(((byte)(255)))), ((int)(((byte)(255)))));
 			this.BtnActualizar.Font = new System.Drawing.Font("Microsoft Tai Le", 7.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-			this.BtnActualizar.Location = new System.Drawing.Point(592, 255);
+			this.BtnActualizar.Location = new System.Drawing.Point(444, 207);
+			this.BtnActualizar.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
 			this.BtnActualizar.Name = "BtnActualizar";
-			this.BtnActualizar.Size = new System.Drawing.Size(95, 48);
+			this.BtnActualizar.Size = new System.Drawing.Size(71, 39);
 			this.BtnActualizar.TabIndex = 31;
 			this.BtnActualizar.Text = "Actualizar";
 			this.BtnActualizar.UseVisualStyleBackColor = false;
@@ -189,9 +195,10 @@ namespace login
 			// 
 			this.Btnquitar.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(128)))), ((int)(((byte)(255)))), ((int)(((byte)(255)))));
 			this.Btnquitar.Font = new System.Drawing.Font("Microsoft Tai Le", 7.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-			this.Btnquitar.Location = new System.Drawing.Point(696, 255);
+			this.Btnquitar.Location = new System.Drawing.Point(522, 207);
+			this.Btnquitar.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
 			this.Btnquitar.Name = "Btnquitar";
-			this.Btnquitar.Size = new System.Drawing.Size(95, 48);
+			this.Btnquitar.Size = new System.Drawing.Size(71, 39);
 			this.Btnquitar.TabIndex = 30;
 			this.Btnquitar.Text = "Quitar";
 			this.Btnquitar.UseVisualStyleBackColor = false;
@@ -199,9 +206,10 @@ namespace login
 			// 
 			// pictureBox1
 			// 
-			this.pictureBox1.Location = new System.Drawing.Point(592, 17);
+			this.pictureBox1.Location = new System.Drawing.Point(444, 14);
+			this.pictureBox1.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
 			this.pictureBox1.Name = "pictureBox1";
-			this.pictureBox1.Size = new System.Drawing.Size(199, 217);
+			this.pictureBox1.Size = new System.Drawing.Size(149, 176);
 			this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
 			this.pictureBox1.TabIndex = 29;
 			this.pictureBox1.TabStop = false;
@@ -209,24 +217,26 @@ namespace login
 			// cmbSexo
 			// 
 			this.cmbSexo.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(128)))), ((int)(((byte)(128)))), ((int)(((byte)(255)))));
-			this.cmbSexo.Font = new System.Drawing.Font("PT Bold Arch", 7.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(178)));
+			this.cmbSexo.Font = new System.Drawing.Font("Microsoft Sans Serif", 7.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(178)));
 			this.cmbSexo.FormattingEnabled = true;
 			this.cmbSexo.Items.AddRange(new object[] {
 									"Hombre",
 									"Mujer ",
 									"Otro"});
-			this.cmbSexo.Location = new System.Drawing.Point(223, 268);
+			this.cmbSexo.Location = new System.Drawing.Point(167, 218);
+			this.cmbSexo.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
 			this.cmbSexo.Name = "cmbSexo";
-			this.cmbSexo.Size = new System.Drawing.Size(121, 31);
+			this.cmbSexo.Size = new System.Drawing.Size(92, 21);
 			this.cmbSexo.TabIndex = 28;
 			// 
 			// Lblsexo
 			// 
 			this.Lblsexo.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(224)))), ((int)(((byte)(224)))), ((int)(((byte)(224)))));
 			this.Lblsexo.Font = new System.Drawing.Font("Microsoft YaHei UI", 7.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-			this.Lblsexo.Location = new System.Drawing.Point(14, 271);
+			this.Lblsexo.Location = new System.Drawing.Point(10, 220);
+			this.Lblsexo.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
 			this.Lblsexo.Name = "Lblsexo";
-			this.Lblsexo.Size = new System.Drawing.Size(100, 23);
+			this.Lblsexo.Size = new System.Drawing.Size(75, 19);
 			this.Lblsexo.TabIndex = 27;
 			this.Lblsexo.Text = "Sexo";
 			// 
@@ -234,16 +244,17 @@ namespace login
 			// 
 			this.LblFechaNac.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(224)))), ((int)(((byte)(224)))), ((int)(((byte)(224)))));
 			this.LblFechaNac.Font = new System.Drawing.Font("Microsoft YaHei UI", 7.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-			this.LblFechaNac.Location = new System.Drawing.Point(14, 212);
+			this.LblFechaNac.Location = new System.Drawing.Point(10, 172);
+			this.LblFechaNac.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
 			this.LblFechaNac.Name = "LblFechaNac";
-			this.LblFechaNac.Size = new System.Drawing.Size(174, 23);
+			this.LblFechaNac.Size = new System.Drawing.Size(130, 19);
 			this.LblFechaNac.TabIndex = 26;
 			this.LblFechaNac.Text = "Fecha de nacimiento";
 			// 
 			// cmbPuesto
 			// 
 			this.cmbPuesto.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(128)))), ((int)(((byte)(128)))), ((int)(((byte)(255)))));
-			this.cmbPuesto.Font = new System.Drawing.Font("PT Bold Arch", 7.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(178)));
+			this.cmbPuesto.Font = new System.Drawing.Font("Microsoft Sans Serif", 7.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(178)));
 			this.cmbPuesto.FormattingEnabled = true;
 			this.cmbPuesto.Items.AddRange(new object[] {
 									"Gerente ",
@@ -257,36 +268,40 @@ namespace login
 									"Conserje",
 									"",
 									""});
-			this.cmbPuesto.Location = new System.Drawing.Point(223, 139);
+			this.cmbPuesto.Location = new System.Drawing.Point(167, 113);
+			this.cmbPuesto.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
 			this.cmbPuesto.Name = "cmbPuesto";
-			this.cmbPuesto.Size = new System.Drawing.Size(121, 31);
+			this.cmbPuesto.Size = new System.Drawing.Size(92, 21);
 			this.cmbPuesto.TabIndex = 25;
 			// 
 			// TxtNombre
 			// 
 			this.TxtNombre.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(128)))), ((int)(((byte)(128)))), ((int)(((byte)(255)))));
-			this.TxtNombre.Font = new System.Drawing.Font("PT Bold Arch", 7.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(178)));
-			this.TxtNombre.Location = new System.Drawing.Point(223, 70);
+			this.TxtNombre.Font = new System.Drawing.Font("Microsoft Sans Serif", 7.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(178)));
+			this.TxtNombre.Location = new System.Drawing.Point(167, 57);
+			this.TxtNombre.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
 			this.TxtNombre.Name = "TxtNombre";
-			this.TxtNombre.Size = new System.Drawing.Size(302, 31);
+			this.TxtNombre.Size = new System.Drawing.Size(228, 19);
 			this.TxtNombre.TabIndex = 24;
 			// 
 			// TxtCodigoEmpleado
 			// 
 			this.TxtCodigoEmpleado.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(128)))), ((int)(((byte)(128)))), ((int)(((byte)(255)))));
-			this.TxtCodigoEmpleado.Font = new System.Drawing.Font("Calisto MT", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-			this.TxtCodigoEmpleado.Location = new System.Drawing.Point(223, 17);
+			this.TxtCodigoEmpleado.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+			this.TxtCodigoEmpleado.Location = new System.Drawing.Point(167, 14);
+			this.TxtCodigoEmpleado.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
 			this.TxtCodigoEmpleado.Name = "TxtCodigoEmpleado";
-			this.TxtCodigoEmpleado.Size = new System.Drawing.Size(302, 25);
+			this.TxtCodigoEmpleado.Size = new System.Drawing.Size(228, 21);
 			this.TxtCodigoEmpleado.TabIndex = 23;
 			// 
 			// LblPuesto
 			// 
 			this.LblPuesto.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(224)))), ((int)(((byte)(224)))), ((int)(((byte)(224)))));
 			this.LblPuesto.Font = new System.Drawing.Font("Microsoft YaHei UI", 7.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-			this.LblPuesto.Location = new System.Drawing.Point(16, 147);
+			this.LblPuesto.Location = new System.Drawing.Point(12, 119);
+			this.LblPuesto.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
 			this.LblPuesto.Name = "LblPuesto";
-			this.LblPuesto.Size = new System.Drawing.Size(100, 23);
+			this.LblPuesto.Size = new System.Drawing.Size(75, 19);
 			this.LblPuesto.TabIndex = 22;
 			this.LblPuesto.Text = "Puesto";
 			// 
@@ -294,9 +309,10 @@ namespace login
 			// 
 			this.LblNombreEmpleado.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(224)))), ((int)(((byte)(224)))), ((int)(((byte)(224)))));
 			this.LblNombreEmpleado.Font = new System.Drawing.Font("Microsoft YaHei UI", 7.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-			this.LblNombreEmpleado.Location = new System.Drawing.Point(14, 78);
+			this.LblNombreEmpleado.Location = new System.Drawing.Point(10, 63);
+			this.LblNombreEmpleado.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
 			this.LblNombreEmpleado.Name = "LblNombreEmpleado";
-			this.LblNombreEmpleado.Size = new System.Drawing.Size(174, 23);
+			this.LblNombreEmpleado.Size = new System.Drawing.Size(130, 19);
 			this.LblNombreEmpleado.TabIndex = 21;
 			this.LblNombreEmpleado.Text = "Nombre del Empleado";
 			// 
@@ -304,17 +320,19 @@ namespace login
 			// 
 			this.LblCodigoEmpleado.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(224)))), ((int)(((byte)(224)))), ((int)(((byte)(224)))));
 			this.LblCodigoEmpleado.Font = new System.Drawing.Font("Microsoft YaHei UI", 7.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-			this.LblCodigoEmpleado.Location = new System.Drawing.Point(14, 17);
+			this.LblCodigoEmpleado.Location = new System.Drawing.Point(10, 14);
+			this.LblCodigoEmpleado.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
 			this.LblCodigoEmpleado.Name = "LblCodigoEmpleado";
-			this.LblCodigoEmpleado.Size = new System.Drawing.Size(174, 23);
+			this.LblCodigoEmpleado.Size = new System.Drawing.Size(130, 19);
 			this.LblCodigoEmpleado.TabIndex = 20;
 			this.LblCodigoEmpleado.Text = "Codigo del empleado";
 			// 
 			// Empleados
 			// 
-			this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
+			this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
 			this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-			this.ClientSize = new System.Drawing.Size(1004, 679);
+			this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(255)))), ((int)(((byte)(192)))));
+			this.ClientSize = new System.Drawing.Size(753, 552);
 			this.Controls.Add(this.BtnSalir);
 			this.Controls.Add(this.dtpFecha);
 			this.Controls.Add(this.dataGridView1);
@@ -334,7 +352,6 @@ namespace login
 			this.Controls.Add(this.LblNombreEmpleado);
 			this.Controls.Add(this.LblCodigoEmpleado);
 			this.Controls.Add(this.btnRegresar);
-			this.Margin = new System.Windows.Forms.Padding(4);
 			this.Name = "Empleados";
 			this.Text = "Empleados";
 			this.Load += new System.EventHandler(this.EmpleadosLoad);

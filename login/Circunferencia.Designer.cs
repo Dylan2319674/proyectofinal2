@@ -48,13 +48,13 @@ namespace login
 			// 
 			// btnRegresar
 			// 
-			this.btnRegresar.Location = new System.Drawing.Point(148, 211);
+			this.btnRegresar.Location = new System.Drawing.Point(32, 285);
 			this.btnRegresar.Name = "btnRegresar";
 			this.btnRegresar.Size = new System.Drawing.Size(75, 23);
 			this.btnRegresar.TabIndex = 0;
 			this.btnRegresar.Text = "Regresar";
 			this.btnRegresar.UseVisualStyleBackColor = true;
-
+			this.btnRegresar.Click += new System.EventHandler(this.BtnRegresarClick);
 			// 
 			// pictureBox1
 			// 
@@ -69,7 +69,7 @@ namespace login
 			// lblRadio
 			// 
 			this.lblRadio.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-			this.lblRadio.Location = new System.Drawing.Point(41, 118);
+			this.lblRadio.Location = new System.Drawing.Point(53, 85);
 			this.lblRadio.Name = "lblRadio";
 			this.lblRadio.Size = new System.Drawing.Size(100, 23);
 			this.lblRadio.TabIndex = 2;
@@ -77,23 +77,24 @@ namespace login
 			// 
 			// txtRadio
 			// 
-			this.txtRadio.Location = new System.Drawing.Point(133, 118);
+			this.txtRadio.Location = new System.Drawing.Point(175, 88);
 			this.txtRadio.Name = "txtRadio";
 			this.txtRadio.Size = new System.Drawing.Size(100, 20);
 			this.txtRadio.TabIndex = 3;
 			// 
 			// btnCalcular
 			// 
-			this.btnCalcular.Location = new System.Drawing.Point(148, 153);
+			this.btnCalcular.Location = new System.Drawing.Point(175, 150);
 			this.btnCalcular.Name = "btnCalcular";
 			this.btnCalcular.Size = new System.Drawing.Size(75, 23);
 			this.btnCalcular.TabIndex = 4;
 			this.btnCalcular.Text = "Calcular";
 			this.btnCalcular.UseVisualStyleBackColor = true;
+			this.btnCalcular.Click += new System.EventHandler(this.BtnCalcularClick);
 			// 
 			// lblResultado
 			// 
-			this.lblResultado.Location = new System.Drawing.Point(148, 259);
+			this.lblResultado.Location = new System.Drawing.Point(175, 208);
 			this.lblResultado.Name = "lblResultado";
 			this.lblResultado.Size = new System.Drawing.Size(100, 23);
 			this.lblResultado.TabIndex = 5;
@@ -102,7 +103,7 @@ namespace login
 			// 
 			this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
 			this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-			this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(128)))), ((int)(((byte)(0)))));
+			this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(255)))), ((int)(((byte)(192)))));
 			this.ClientSize = new System.Drawing.Size(343, 320);
 			this.Controls.Add(this.lblResultado);
 			this.Controls.Add(this.btnCalcular);

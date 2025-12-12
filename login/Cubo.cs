@@ -35,5 +35,12 @@ namespace login
 			FormularioPrincipal.Show();
 			this.Hide();
 		}
+		
+		void BtnCalcularClick(object sender, EventArgs e)
+		{
+			double lado = double.Parse(txtLado.Text);
+    		double volumen = Math.Pow(lado, 3);
+    		lblResultado.Text = volumen.ToString("0.00");
+		}
 	}
 }
