@@ -123,7 +123,7 @@ namespace login
 		void BoletaDeCalificacionesToolStripMenuItemClick(object sender, EventArgs e)
 		{
 			Boleta FormularioBoleta = new Boleta();
-
+			FormularioBoleta.Show();
 			this.Hide();
 		}
 		

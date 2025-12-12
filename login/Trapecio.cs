@@ -43,17 +43,14 @@ namespace login
                 MessageBox.Show("Completa todos los campos.");
                 return;
             }
-
-            // Convertir valores
             double B = Convert.ToDouble(txtBaseMayor.Text);
             double b = Convert.ToDouble(txtBasemenor.Text);
             double h = Convert.ToDouble(txtAltura.Text);
 
-            // Fórmula del área del trapecio:
-            // A = (B + b) / 2 * h
+         
             double area = ((B + b) / 2) * h;
 
-            // Mostrar resultado
+            
             lblResultado.Text = "Área: " + area.ToString("F2");
 		}
 	}

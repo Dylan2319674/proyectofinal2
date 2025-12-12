@@ -52,7 +52,7 @@ namespace login
 			// 
 			// btnRegresar
 			// 
-			this.btnRegresar.Location = new System.Drawing.Point(233, 306);
+			this.btnRegresar.Location = new System.Drawing.Point(12, 212);
 			this.btnRegresar.Name = "btnRegresar";
 			this.btnRegresar.Size = new System.Drawing.Size(75, 23);
 			this.btnRegresar.TabIndex = 0;
@@ -73,7 +73,7 @@ namespace login
 			// label1
 			// 
 			this.label1.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-			this.label1.Location = new System.Drawing.Point(122, 113);
+			this.label1.Location = new System.Drawing.Point(131, 47);
 			this.label1.Name = "label1";
 			this.label1.Size = new System.Drawing.Size(100, 23);
 			this.label1.TabIndex = 2;
@@ -81,7 +81,7 @@ namespace login
 			// 
 			// txtBaseMayor
 			// 
-			this.txtBaseMayor.Location = new System.Drawing.Point(218, 112);
+			this.txtBaseMayor.Location = new System.Drawing.Point(237, 50);
 			this.txtBaseMayor.Name = "txtBaseMayor";
 			this.txtBaseMayor.Size = new System.Drawing.Size(100, 20);
 			this.txtBaseMayor.TabIndex = 3;
@@ -89,7 +89,7 @@ namespace login
 			// label2
 			// 
 			this.label2.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-			this.label2.Location = new System.Drawing.Point(122, 153);
+			this.label2.Location = new System.Drawing.Point(131, 102);
 			this.label2.Name = "label2";
 			this.label2.Size = new System.Drawing.Size(100, 23);
 			this.label2.TabIndex = 4;
@@ -97,7 +97,7 @@ namespace login
 			// 
 			// txtBasemenor
 			// 
-			this.txtBasemenor.Location = new System.Drawing.Point(218, 153);
+			this.txtBasemenor.Location = new System.Drawing.Point(237, 102);
 			this.txtBasemenor.Name = "txtBasemenor";
 			this.txtBasemenor.Size = new System.Drawing.Size(100, 20);
 			this.txtBasemenor.TabIndex = 5;
@@ -105,7 +105,7 @@ namespace login
 			// label3
 			// 
 			this.label3.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-			this.label3.Location = new System.Drawing.Point(122, 199);
+			this.label3.Location = new System.Drawing.Point(131, 163);
 			this.label3.Name = "label3";
 			this.label3.Size = new System.Drawing.Size(100, 23);
 			this.label3.TabIndex = 6;
@@ -113,14 +113,14 @@ namespace login
 			// 
 			// txtAltura
 			// 
-			this.txtAltura.Location = new System.Drawing.Point(218, 199);
+			this.txtAltura.Location = new System.Drawing.Point(237, 163);
 			this.txtAltura.Name = "txtAltura";
 			this.txtAltura.Size = new System.Drawing.Size(100, 20);
 			this.txtAltura.TabIndex = 7;
 			// 
 			// btnCalcular
 			// 
-			this.btnCalcular.Location = new System.Drawing.Point(233, 246);
+			this.btnCalcular.Location = new System.Drawing.Point(249, 212);
 			this.btnCalcular.Name = "btnCalcular";
 			this.btnCalcular.Size = new System.Drawing.Size(75, 23);
 			this.btnCalcular.TabIndex = 8;
@@ -131,7 +131,7 @@ namespace login
 			// lblResultado
 			// 
 			this.lblResultado.AccessibleRole = System.Windows.Forms.AccessibleRole.None;
-			this.lblResultado.Location = new System.Drawing.Point(218, 322);
+			this.lblResultado.Location = new System.Drawing.Point(365, 212);
 			this.lblResultado.Name = "lblResultado";
 			this.lblResultado.Size = new System.Drawing.Size(100, 23);
 			this.lblResultado.TabIndex = 9;
@@ -140,8 +140,8 @@ namespace login
 			// 
 			this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
 			this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-			this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(128)))), ((int)(((byte)(0)))));
-			this.ClientSize = new System.Drawing.Size(579, 371);
+			this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(255)))), ((int)(((byte)(192)))));
+			this.ClientSize = new System.Drawing.Size(507, 280);
 			this.Controls.Add(this.lblResultado);
 			this.Controls.Add(this.btnCalcular);
 			this.Controls.Add(this.txtAltura);

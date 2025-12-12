@@ -30,5 +30,19 @@ namespace login
 		}
 		
 		
+		
+		void BtnRegresarClick(object sender, EventArgs e)
+		{
+			Principal FormularioPrincipal = new Principal();
+			FormularioPrincipal.Show();
+			this.Hide();
+		}
+		
+		void BtnCalcularClick(object sender, EventArgs e)
+		{
+			double r = double.Parse(txtRadio.Text);
+    		double perimetro = 2 * Math.PI * r;
+    		lblResultado.Text = perimetro.ToString("0.00");
+		}
 	}
 }

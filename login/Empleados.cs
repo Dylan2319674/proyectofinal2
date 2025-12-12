@@ -25,7 +25,6 @@ namespace login
         void EmpleadosLoad(object sender, EventArgs e)
         {
             string ruta = Application.StartupPath + @"\Imagen1.jpg";
-            pictureBox1.Image = Image.FromFile(ruta);
         }
 
         void BtnRegresarClick(object sender, EventArgs e)
