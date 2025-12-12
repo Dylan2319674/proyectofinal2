@@ -34,5 +34,28 @@ namespace login
 			FormularioPrincipal.Show();
 			this.Hide();
 		}
+		
+		void BtnCalcularClick(object sender, EventArgs e)
+		{
+			int n = int.Parse(txtNumero.Text);
+
+    		int a = 0;
+    		int b = 1;
+    		int c = 0;
+
+    		if (n == 0) c = 0;
+    		else if (n == 1) c = 1;
+   		 else
+   		 {
+       		 for (int i = 2; i <= n; i++)
+       	 {
+           		 c = a + b;
+           		 a = b;
+           		 b = c;
+       	 }
+    	}
+
+    			lblResultado.Text = c.ToString();
+		}
 	}
 }
