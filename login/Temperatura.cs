@@ -35,5 +35,23 @@ namespace login
 			FormularioPrincipal.Show();
 			this.Hide();
 		}
+		
+		void BtnConvertirClick(object sender, EventArgs e)
+		{
+			double c, f;
+
+
+    	if (double.TryParse(TxtCelsius.Text, out c))
+    	{
+
+       	 f = (c * 9.0 / 5.0) + 32;
+
+        	lblResultado.Text = f.ToString("0.00");
+    	}
+    	else
+    	{
+       		 MessageBox.Show("Ingresa un valor numérico válido.");
+    	}
+		}
 	}
 }

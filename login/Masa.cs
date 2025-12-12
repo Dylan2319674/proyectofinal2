@@ -35,5 +35,23 @@ namespace login
 			FormularioPrincipal.Show();
 			this.Hide();
 		}
+		
+		void BtnConvertirClick(object sender, EventArgs e)
+		{
+				double kg, libras;
+
+		
+   				 if (double.TryParse(TxtKilogramos.Text, out kg))
+    		{
+
+       			 libras = kg * 2.20462;
+
+       		 lblResultado.Text = libras.ToString("0.00");
+   		 }
+   			 else
+   			 {
+      			  MessageBox.Show("Ingresa un valor numérico válido.");
+   			 }
+		}
 	}
 }
