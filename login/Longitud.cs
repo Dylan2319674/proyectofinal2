@@ -35,4 +35,4 @@ namespace login
 			double millas = km * 0.621371;
 			lblResultado.Text = millas.ToString("0.00");
 		}
-	}
+

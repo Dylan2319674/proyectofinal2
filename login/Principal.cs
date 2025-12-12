@@ -157,5 +157,20 @@ namespace login
 		{
 			
 		}
+		
+		void SalirToolStripMenuItemClick(object sender, EventArgs e)
+		{
+			DialogResult respuesta = MessageBox.Show(
+        "¿Deseas salir de la aplicación?",
+        "Confirmar salida",
+        MessageBoxButtons.YesNo,
+        MessageBoxIcon.Question
+    	);
+
+    	if (respuesta == DialogResult.Yes)
+   			 {
+        		Application.Exit();
+    		}
+		}
 	}
 }
