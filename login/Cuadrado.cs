@@ -35,5 +35,18 @@ namespace login
 			FormularioPrincipal.Show();
 			this.Hide();
 		}
+		
+		void Label1Click(object sender, EventArgs e)
+		{
+			
+		}
+		
+		void BtnCalcularClick(object sender, EventArgs e)
+		{
+			double lado = double.Parse(txtLado.Text);
+			double area = lado * lado;
+
+			lblResultado.Text = "Área: " + area;
+		}
 	}
 }
