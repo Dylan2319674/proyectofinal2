@@ -1,0 +1,186 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003" DefaultTargets="Build">
+  <PropertyGroup>
+    <ProjectGuid>{A117F333-6262-428A-B1B1-61264BD5A830}</ProjectGuid>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <OutputType>WinExe</OutputType>
+    <RootNamespace>login</RootNamespace>
+    <AssemblyName>login</AssemblyName>
+    <TargetFrameworkVersion>v4.0</TargetFrameworkVersion>
+    <TargetFrameworkProfile>Client</TargetFrameworkProfile>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Platform)' == 'AnyCPU' ">
+    <PlatformTarget>x86</PlatformTarget>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)' == 'Debug' ">
+    <OutputPath>bin\Debug\</OutputPath>
+    <DebugSymbols>True</DebugSymbols>
+    <DebugType>Full</DebugType>
+    <Optimize>False</Optimize>
+    <CheckForOverflowUnderflow>True</CheckForOverflowUnderflow>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)' == 'Release' ">
+    <OutputPath>bin\Release\</OutputPath>
+    <DebugSymbols>False</DebugSymbols>
+    <DebugType>None</DebugType>
+    <Optimize>True</Optimize>
+    <CheckForOverflowUnderflow>False</CheckForOverflowUnderflow>
+    <DefineConstants>TRACE</DefineConstants>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="System" />
+    <Reference Include="System.Core">
+      <RequiredTargetFramework>3.5</RequiredTargetFramework>
+    </Reference>
+    <Reference Include="System.Data" />
+    <Reference Include="System.Data.DataSetExtensions">
+      <RequiredTargetFramework>3.5</RequiredTargetFramework>
+    </Reference>
+    <Reference Include="System.Drawing" />
+    <Reference Include="System.Windows.Forms" />
+    <Reference Include="System.Xml" />
+    <Reference Include="System.Xml.Linq">
+      <RequiredTargetFramework>3.5</RequiredTargetFramework>
+    </Reference>
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="Acerca.cs" />
+    <Compile Include="Acerca.Designer.cs">
+      <DependentUpon>Acerca.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Boleta.cs" />
+    <Compile Include="Boleta.Designer.cs">
+      <DependentUpon>Boleta.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Circunferencia.cs" />
+    <Compile Include="Circunferencia.Designer.cs">
+      <DependentUpon>Circunferencia.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Cuadrado.cs" />
+    <Compile Include="Cuadrado.Designer.cs">
+      <DependentUpon>Cuadrado.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Cubo.cs" />
+    <Compile Include="Cubo.Designer.cs">
+      <DependentUpon>Cubo.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Empleados.cs" />
+    <Compile Include="Empleados.Designer.cs">
+      <DependentUpon>Empleados.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Esfera.cs" />
+    <Compile Include="Esfera.Designer.cs">
+      <DependentUpon>Esfera.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Factorial.cs" />
+    <Compile Include="Factorial.Designer.cs">
+      <DependentUpon>Factorial.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Fibonacci.cs" />
+    <Compile Include="Fibonacci.Designer.cs">
+      <DependentUpon>Fibonacci.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Longitud.cs" />
+    <Compile Include="Longitud.Designer.cs">
+      <DependentUpon>Longitud.cs</DependentUpon>
+    </Compile>
+    <Compile Include="MainForm.cs" />
+    <Compile Include="MainForm.Designer.cs">
+      <DependentUpon>MainForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Masa.cs" />
+    <Compile Include="Masa.Designer.cs">
+      <DependentUpon>Masa.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Postres.cs" />
+    <Compile Include="Postres.Designer.cs">
+      <DependentUpon>Postres.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Principal.cs" />
+    <Compile Include="Principal.Designer.cs">
+      <DependentUpon>Principal.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Program.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="Rectangulo.cs" />
+    <Compile Include="Rectangulo.Designer.cs">
+      <DependentUpon>Rectangulo.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Temperatura.cs" />
+    <Compile Include="Temperatura.Designer.cs">
+      <DependentUpon>Temperatura.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Tiempo.cs" />
+    <Compile Include="Tiempo.Designer.cs">
+      <DependentUpon>Tiempo.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Trapecio.cs" />
+    <Compile Include="Trapecio.Designer.cs">
+      <DependentUpon>Trapecio.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Triangulo.cs" />
+    <Compile Include="Triangulo.Designer.cs">
+      <DependentUpon>Triangulo.cs</DependentUpon>
+    </Compile>
+  </ItemGroup>
+  <ItemGroup>
+    <EmbeddedResource Include="Acerca.resx">
+      <DependentUpon>Acerca.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Boleta.resx">
+      <DependentUpon>Boleta.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Circunferencia.resx">
+      <DependentUpon>Circunferencia.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Cuadrado.resx">
+      <DependentUpon>Cuadrado.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Cubo.resx">
+      <DependentUpon>Cubo.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Empleados.resx">
+      <DependentUpon>Empleados.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Esfera.resx">
+      <DependentUpon>Esfera.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Factorial.resx">
+      <DependentUpon>Factorial.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Fibonacci.resx">
+      <DependentUpon>Fibonacci.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Longitud.resx">
+      <DependentUpon>Longitud.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="MainForm.resx">
+      <DependentUpon>MainForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Masa.resx">
+      <DependentUpon>Masa.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Postres.resx">
+      <DependentUpon>Postres.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Rectangulo.resx">
+      <DependentUpon>Rectangulo.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Temperatura.resx">
+      <DependentUpon>Temperatura.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Tiempo.resx">
+      <DependentUpon>Tiempo.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Trapecio.resx">
+      <DependentUpon>Trapecio.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Triangulo.resx">
+      <DependentUpon>Triangulo.cs</DependentUpon>
+    </EmbeddedResource>
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+</Project>
