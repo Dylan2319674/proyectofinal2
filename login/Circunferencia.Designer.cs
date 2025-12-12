@@ -54,7 +54,7 @@ namespace login
 			this.btnRegresar.TabIndex = 0;
 			this.btnRegresar.Text = "Regresar";
 			this.btnRegresar.UseVisualStyleBackColor = true;
-			this.btnRegresar.Click += new System.EventHandler(this.BtnRegresarClick);
+
 			// 
 			// pictureBox1
 			// 
@@ -90,7 +90,6 @@ namespace login
 			this.btnCalcular.TabIndex = 4;
 			this.btnCalcular.Text = "Calcular";
 			this.btnCalcular.UseVisualStyleBackColor = true;
-			this.btnCalcular.Click += new System.EventHandler(this.BtnCalcularClick);
 			// 
 			// lblResultado
 			// 

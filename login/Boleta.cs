@@ -1,8 +1,8 @@
 ﻿/*
  * Creado por SharpDevelop.
- * Usuario: CC1_PC44
- * Fecha: 10/12/2025
- * Hora: 02:21 p. m.
+ * Usuario: Reyes
+ * Fecha: 11/12/2025
+ * Hora: 07:04 p. m.
  * 
  * Para cambiar esta plantilla use Herramientas | Opciones | Codificación | Editar Encabezados Estándar
  */

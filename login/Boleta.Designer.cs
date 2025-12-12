@@ -1,8 +1,8 @@
 ﻿/*
  * Creado por SharpDevelop.
- * Usuario: CC1_PC44
- * Fecha: 10/12/2025
- * Hora: 02:21 p. m.
+ * Usuario: Reyes
+ * Fecha: 11/12/2025
+ * Hora: 07:04 p. m.
  * 
  * Para cambiar esta plantilla use Herramientas | Opciones | Codificación | Editar Encabezados Estándar
  */
@@ -41,19 +41,20 @@ namespace login
 			// 
 			// btnRegresar
 			// 
-			this.btnRegresar.Location = new System.Drawing.Point(75, 130);
+			this.btnRegresar.Location = new System.Drawing.Point(343, 344);
+			this.btnRegresar.Margin = new System.Windows.Forms.Padding(4);
 			this.btnRegresar.Name = "btnRegresar";
-			this.btnRegresar.Size = new System.Drawing.Size(75, 23);
-			this.btnRegresar.TabIndex = 0;
+			this.btnRegresar.Size = new System.Drawing.Size(100, 28);
+			this.btnRegresar.TabIndex = 1;
 			this.btnRegresar.Text = "Regresar";
 			this.btnRegresar.UseVisualStyleBackColor = true;
 			this.btnRegresar.Click += new System.EventHandler(this.BtnRegresarClick);
 			// 
 			// Boleta
 			// 
-			this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
+			this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
 			this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-			this.ClientSize = new System.Drawing.Size(284, 261);
+			this.ClientSize = new System.Drawing.Size(502, 447);
 			this.Controls.Add(this.btnRegresar);
 			this.Name = "Boleta";
 			this.Text = "Boleta";

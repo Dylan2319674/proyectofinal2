@@ -123,7 +123,7 @@ namespace login
 		void BoletaDeCalificacionesToolStripMenuItemClick(object sender, EventArgs e)
 		{
 			Boleta FormularioBoleta = new Boleta();
-			FormularioBoleta.Show();
+
 			this.Hide();
 		}
 		
@@ -146,6 +146,16 @@ namespace login
 			Acerca FormularioAcerca = new Acerca();
 			FormularioAcerca.Show();
 			this.Hide();
+		}
+		
+		void ConversionesToolStripMenuItemClick(object sender, EventArgs e)
+		{
+			
+		}
+		
+		void LongitudToolStripMenuItemClick(object sender, EventArgs e)
+		{
+			
 		}
 	}
 }
