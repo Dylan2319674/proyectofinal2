@@ -238,5 +238,12 @@ namespace login
 
     CargarImagen("imagen" + indiceImagen + ".jpg");
 }
+		
+		void BtnRegresarClick(object sender, EventArgs e)
+		{
+			Principal FormularioPrincipal = new Principal();
+			FormularioPrincipal.Show();
+			this.Hide();
+		}
     }
 }
