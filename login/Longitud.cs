@@ -1,4 +1,4 @@
-﻿/*
+/*
  * Creado por SharpDevelop.
  * Usuario: CC1_PC44
  * Fecha: 10/12/2025
@@ -35,5 +35,4 @@ namespace login
 			double millas = km * 0.621371;
 			lblResultado.Text = millas.ToString("0.00");
 		}
-	}
-}
+
