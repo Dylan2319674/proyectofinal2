@@ -50,30 +50,10 @@ namespace login
 			rbdSalado.CheckedChanged += RbdSaladoCheckedChanged;
 		}
 
-		void RbdDulceCheckedChanged(object sender, EventArgs e)
-		{
-			if (rbdDulce.Checked)
-			{
-				cmbProducto.Items.Clear();
-				cmbProducto.Items.AddRange(productosDulces);
-				cmbProducto.SelectedIndex = 0;
-			}
-		}
-
-		void RbdSaladoCheckedChanged(object sender, EventArgs e)
-		{
-			if (rbdSalado.Checked)
-			{
-				cmbProducto.Items.Clear();
-				cmbProducto.Items.AddRange(productosSalados);
-				cmbProducto.SelectedIndex = 0;
-			}
-		}
-
 		void BtnRegresarClick(object sender, EventArgs e)
 		{
-			Principal FormularioPrincipal = new Principal();
-			FormularioPrincipal.Show();
+			Principal formularioPrincipal = new Principal();
+			formularioPrincipal.Show();
 			this.Hide();
 		}
 
@@ -107,6 +87,30 @@ namespace login
 			fila.SubItems.Add(tipo);
 			listView1.Items.Add(fila);
 
+			RecalcularTotales();
+		}
+
+		void TxtImportePagadoTextChanged(object sender, EventArgs e)
+		{
+			RecalcularCambio();
+		}
+
+		void BtnEliminarProductoClick(object sender, EventArgs e)
+		{
+			if (listView1.SelectedItems.Count == 0)
+			{
+				MessageBox.Show("Seleccione un producto para eliminar");
+				return;
+			}
+
+			listView1.Items.Remove(listView1.SelectedItems[0]);
+			RecalcularTotales();
+		}
+
+		// ================= MÉTODOS DE APOYO =================
+
+		void RecalcularTotales()
+		{
 			decimal subtotal = 0m;
 			foreach (ListViewItem item in listView1.Items)
 			{
@@ -125,16 +129,10 @@ namespace login
 			decimal importeNeto = subtotal - descuento;
 			TxtImporteNeto.Text = importeNeto.ToString("0.00");
 
-			decimal pagado = 0m;
-			decimal.TryParse(TxtImportePagado.Text, out pagado);
-
-			decimal cambio = pagado - importeNeto;
-			if (cambio < 0) cambio = 0;
-
-			TxtCambio.Text = cambio.ToString("0.00");
+			RecalcularCambio();
 		}
 
-		void TxtImportePagadoTextChanged(object sender, EventArgs e)
+		void RecalcularCambio()
 		{
 			decimal pagado, neto;
 			if (!decimal.TryParse(TxtImportePagado.Text, out pagado)) return;
@@ -144,43 +142,6 @@ namespace login
 			if (cambio < 0) cambio = 0;
 
 			TxtCambio.Text = cambio.ToString("0.00");
-		}
-		
-		void BtnEliminarProductoClick(object sender, EventArgs e)
-		{
-			if (listView1.SelectedItems.Count == 0)
-	{
-		MessageBox.Show("Seleccione un producto para eliminar");
-		return;
-	}
-
-	listView1.Items.Remove(listView1.SelectedItems[0]);
-
-	decimal subtotal = 0m;
-	foreach (ListViewItem item in listView1.Items)
-	{
-		subtotal += Convert.ToDecimal(item.SubItems[3].Text);
-	}
-	TxtSubtotal.Text = subtotal.ToString("0.00");
-
-	decimal descuento = 0m;
-	if (TxtDescuento.Text != "")
-	{
-		decimal porc;
-		if (decimal.TryParse(TxtDescuento.Text, out porc))
-			descuento = subtotal * (porc / 100m);
-	}
-
-	decimal importeNeto = subtotal - descuento;
-	TxtImporteNeto.Text = importeNeto.ToString("0.00");
-
-	decimal pagado = 0m;
-	decimal.TryParse(TxtImportePagado.Text, out pagado);
-
-	decimal cambio = pagado - importeNeto;
-	if (cambio < 0) cambio = 0;
-
-	TxtCambio.Text = cambio.ToString("0.00");
 		}
 	}
 }
