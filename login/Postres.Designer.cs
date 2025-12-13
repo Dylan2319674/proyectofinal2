@@ -41,11 +41,11 @@ namespace login
 			// 
 			// btnRegresar
 			// 
-			this.btnRegresar.Location = new System.Drawing.Point(105, 163);
+			this.btnRegresar.Location = new System.Drawing.Point(118, 71);
 			this.btnRegresar.Name = "btnRegresar";
 			this.btnRegresar.Size = new System.Drawing.Size(75, 23);
 			this.btnRegresar.TabIndex = 0;
-			this.btnRegresar.Text = "Regresar";
+			this.btnRegresar.Text = "Calcular";
 			this.btnRegresar.UseVisualStyleBackColor = true;
 			this.btnRegresar.Click += new System.EventHandler(this.BtnRegresarClick);
 			// 
@@ -53,7 +53,8 @@ namespace login
 			// 
 			this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
 			this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-			this.ClientSize = new System.Drawing.Size(284, 261);
+			this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(255)))), ((int)(((byte)(192)))));
+			this.ClientSize = new System.Drawing.Size(334, 188);
 			this.Controls.Add(this.btnRegresar);
 			this.Name = "Postres";
 			this.Text = "Postres";

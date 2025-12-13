@@ -28,7 +28,6 @@ namespace login
 			// TODO: Add constructor code after the InitializeComponent() call.
 			//
 		}
-		
 		void BtnRegresarClick(object sender, EventArgs e)
 		{
 			Principal FormularioPrincipal = new Principal();
