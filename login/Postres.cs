@@ -3,20 +3,21 @@
  * Usuario: CC1_PC44
  * Fecha: 10/12/2025
  * Hora: 02:21 p. m.
- * 
- * Para cambiar esta plantilla use Herramientas | Opciones | Codificación | Editar Encabezados Estándar
  */
 
 using System;
 using System.Drawing;
-using System.IO;
 using System.Windows.Forms;
 using System.Drawing.Printing;
+using MySql.Data.MySqlClient;
 
 namespace login
 {
 	public partial class Postres : Form
 	{
+		// CADENA DE CONEXIÓN (AJUSTA SI ES NECESARIO)
+		string conexion = "server=localhost;database=tu_basedatos;user=root;password=;";
+
 		string[] productosDulces = {
 			"Pastel de Chocolate",
 			"Pastel de Vainilla",
@@ -40,7 +41,6 @@ namespace login
 
 			RbdDulce.CheckedChanged += RbdDulceCheckedChanged;
 			RbdSalado.CheckedChanged += RbdSaladoCheckedChanged;
-
 			cmbProducto.SelectedIndexChanged += cmbProductoSelectedIndexChanged;
 
 			TxtPrecio.KeyPress += SoloNumeros;
@@ -98,29 +98,26 @@ namespace login
 		void BtnAgregarProductoClick(object sender, EventArgs e)
 		{
 			if (TxtPrecio.Text == "" || TxtCantidad.Text == "")
-	{
-		MessageBox.Show("Ingrese precio y cantidad");
-		return;
-	}
+			{
+				MessageBox.Show("Ingrese precio y cantidad");
+				return;
+			}
 
-	decimal precio = Convert.ToDecimal(TxtPrecio.Text);
-	decimal cantidad = Convert.ToDecimal(TxtCantidad.Text);
+			decimal precio = Convert.ToDecimal(TxtPrecio.Text);
+			decimal cantidad = Convert.ToDecimal(TxtCantidad.Text);
+			decimal total = precio * cantidad;
 
-	// TOTAL DEL PRODUCTO (SIN DESCUENTO)
-	decimal total = precio * cantidad;
-	TxtTotal.Text = total.ToString("0.00");
+			string tipo = RbdDulce.Checked ? "Dulce" : "Salado";
 
-	string tipo = RbdDulce.Checked ? "Dulce" : "Salado";
+			ListViewItem fila = new ListViewItem(cmbProducto.Text);
+			fila.SubItems.Add(precio.ToString("0.00"));
+			fila.SubItems.Add(cantidad.ToString());
+			fila.SubItems.Add(total.ToString("0.00"));
+			fila.SubItems.Add(tipo);
 
-	ListViewItem fila = new ListViewItem(cmbProducto.Text);
-	fila.SubItems.Add(precio.ToString("0.00"));
-	fila.SubItems.Add(cantidad.ToString());
-	fila.SubItems.Add(total.ToString("0.00"));
-	fila.SubItems.Add(tipo);
+			listView1.Items.Add(fila);
 
-	listView1.Items.Add(fila);
-
-	RecalcularTotales();
+			RecalcularTotales();
 		}
 
 		void RecalcularTotales()
@@ -139,8 +136,6 @@ namespace login
 			decimal neto = subtotal - descuento;
 
 			TxtImporteNeto.Text = neto.ToString("0.00");
-
-
 			TxtTotal.Text = neto.ToString("0.00");
 
 			RecalcularCambio();
@@ -159,23 +154,48 @@ namespace login
 
 		void BtnGuardarClick(object sender, EventArgs e)
 		{
-			StreamWriter sw = new StreamWriter("ticket.txt");
+			if (listView1.Items.Count == 0)
+			{
+				MessageBox.Show("No hay productos");
+				return;
+			}
 
-			sw.WriteLine("=== TICKET ===");
-			foreach (ListViewItem item in listView1.Items)
-				sw.WriteLine(item.Text + " - $" + item.SubItems[3].Text);
+			try
+			{
+				MySqlConnection cn = new MySqlConnection(conexion);
+				cn.Open();
 
-			sw.WriteLine("Total: $" + TxtTotal.Text);
-			sw.Close();
+				string sqlVenta = "INSERT INTO ventas (total, fecha) VALUES (@total, NOW())";
+				MySqlCommand cmdVenta = new MySqlCommand(sqlVenta, cn);
+				cmdVenta.Parameters.AddWithValue("@total", TxtTotal.Text);
+				cmdVenta.ExecuteNonQuery();
 
-			MessageBox.Show("Ticket guardado correctamente");
-		}
+				int ventaId = (int)cmdVenta.LastInsertedId;
 
-		void BtnImprimirClick(object sender, EventArgs e)
-		{
-			PrintDocument doc = new PrintDocument();
-			doc.PrintPage += Imprimir;
-			doc.Print();
+				foreach (ListViewItem item in listView1.Items)
+				{
+					string sqlDetalle =
+						"INSERT INTO detalle_venta (venta_id, producto, precio, cantidad, total, tipo) " +
+						"VALUES (@venta, @producto, @precio, @cantidad, @total, @tipo)";
+
+					MySqlCommand cmd = new MySqlCommand(sqlDetalle, cn);
+					cmd.Parameters.AddWithValue("@venta", ventaId);
+					cmd.Parameters.AddWithValue("@producto", item.Text);
+					cmd.Parameters.AddWithValue("@precio", item.SubItems[1].Text);
+					cmd.Parameters.AddWithValue("@cantidad", item.SubItems[2].Text);
+					cmd.Parameters.AddWithValue("@total", item.SubItems[3].Text);
+					cmd.Parameters.AddWithValue("@tipo", item.SubItems[4].Text);
+
+					cmd.ExecuteNonQuery();
+				}
+
+				cn.Close();
+				MessageBox.Show("Venta guardada en MySQL correctamente");
+			}
+			catch (Exception ex)
+			{
+				MessageBox.Show("Error MySQL: " + ex.Message);
+			}
 		}
 
 		void Imprimir(object sender, PrintPageEventArgs e)
@@ -189,8 +209,7 @@ namespace login
 				e.Graphics.DrawString(
 					item.Text + " $" + item.SubItems[3].Text,
 					new Font("Arial", 10),
-					Brushes.Black,
-					20, y);
+					Brushes.Black, 20, y);
 				y += 20;
 			}
 
@@ -200,46 +219,37 @@ namespace login
 				new Font("Arial", 11, FontStyle.Bold),
 				Brushes.Black, 20, y);
 		}
-		
-		void TxtTotalTextChanged(object sender, EventArgs e)
-		{
-			
-		}
-		
+
 		void BtnLimpiarClick(object sender, EventArgs e)
 		{
+			TxtPrecio.Text = "";
+			TxtCantidad.Text = "";
+			TxtTotal.Text = "";
+			TxtSubtotal.Text = "";
+			TxtDescuento.Text = "";
+			TxtImporteNeto.Text = "";
+			TxtImportePagado.Text = "";
+			TxtCambio.Text = "";
 
-	TxtPrecio.Text = "";
-	TxtCantidad.Text = "";
-	TxtTotal.Text = "";
-	TxtSubtotal.Text = "";
-	TxtDescuento.Text = "";
-	TxtImporteNeto.Text = "";
-	TxtImportePagado.Text = "";
-	TxtCambio.Text = "";
-	TxtTotal.Text = "";
+			cmbProducto.Items.Clear();
+			cmbProducto.Text = "";
 
+			RbdDulce.Checked = false;
+			RbdSalado.Checked = false;
 
-	cmbProducto.Items.Clear();
-	cmbProducto.Text = "";
-
-
-	RbdDulce.Checked = false;
-	RbdSalado.Checked = false;
-
-
-
+			listView1.Items.Clear();
 		}
-		void BtnEliminarProductoClick(object sender, System.EventArgs e)
+
+		void BtnEliminarProductoClick(object sender, EventArgs e)
 		{
 			if (listView1.SelectedItems.Count == 0)
-	{
-		MessageBox.Show("Seleccione un producto para eliminar");
-		return;
-	}
+			{
+				MessageBox.Show("Seleccione un producto para eliminar");
+				return;
+			}
 
-	listView1.Items.Remove(listView1.SelectedItems[0]);
-	RecalcularTotales();
+			listView1.Items.Remove(listView1.SelectedItems[0]);
+			RecalcularTotales();
 		}
 	}
 }
