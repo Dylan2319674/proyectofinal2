@@ -60,8 +60,9 @@ namespace login
 			this.btnRegresar.Name = "btnRegresar";
 			this.btnRegresar.Size = new System.Drawing.Size(75, 57);
 			this.btnRegresar.TabIndex = 0;
-			this.btnRegresar.Text = "Calcular";
+			this.btnRegresar.Text = "Regresar";
 			this.btnRegresar.UseVisualStyleBackColor = true;
+			this.btnRegresar.Click += new System.EventHandler(this.BtnRegresarClick);
 			// 
 			// TxtBorrar
 			// 
@@ -216,7 +217,6 @@ namespace login
 			this.BtnImprimir.TabIndex = 53;
 			this.BtnImprimir.Text = "Imprimir";
 			this.BtnImprimir.UseVisualStyleBackColor = true;
-			
 			// 
 			// listView1
 			// 
@@ -261,7 +261,6 @@ namespace login
 			this.TxtTotal.Name = "TxtTotal";
 			this.TxtTotal.Size = new System.Drawing.Size(76, 20);
 			this.TxtTotal.TabIndex = 37;
-			
 			// 
 			// TxtCantidad
 			// 

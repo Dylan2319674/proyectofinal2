@@ -251,5 +251,12 @@ namespace login
 			listView1.Items.Remove(listView1.SelectedItems[0]);
 			RecalcularTotales();
 		}
+		
+		void BtnRegresarClick(object sender, EventArgs e)
+		{
+			Principal FormularioPrincipal = new Principal();
+			FormularioPrincipal.Show();
+			this.Hide();
+		}
 	}
 }
