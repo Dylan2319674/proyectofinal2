@@ -1,4 +1,4 @@
-/*
+﻿/*
  * Creado por SharpDevelop.
  * Usuario: CC1_PC44
  * Fecha: 10/12/2025
@@ -35,5 +35,7 @@ namespace login
     		double f = (c * 9.0 / 5.0) + 32;
    		    lblResultado.Text = f.ToString("0.00");
 		}
+		
+		
 	}
 }

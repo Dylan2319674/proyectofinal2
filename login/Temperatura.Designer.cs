@@ -1,4 +1,4 @@
-/*
+﻿/*
  * Creado por SharpDevelop.
  * Usuario: CC1_PC44
  * Fecha: 10/12/2025
@@ -46,22 +46,24 @@ namespace login
 			// 
 			// btnRegresar
 			// 
-			this.btnRegresar.Location = new System.Drawing.Point(247, 59);
+			this.btnRegresar.BackColor = System.Drawing.Color.Red;
+			this.btnRegresar.Location = new System.Drawing.Point(140, 120);
 			this.btnRegresar.Name = "btnRegresar";
 			this.btnRegresar.Size = new System.Drawing.Size(75, 23);
 			this.btnRegresar.TabIndex = 0;
 			this.btnRegresar.Text = "Regresar";
-			this.btnRegresar.UseVisualStyleBackColor = true;
+			this.btnRegresar.UseVisualStyleBackColor = false;
 			this.btnRegresar.Click += new System.EventHandler(this.BtnRegresarClick);
 			// 
 			// btnCalcular
 			// 
-			this.btnCalcular.Location = new System.Drawing.Point(115, 120);
+			this.btnCalcular.BackColor = System.Drawing.Color.Lime;
+			this.btnCalcular.Location = new System.Drawing.Point(37, 120);
 			this.btnCalcular.Name = "btnCalcular";
 			this.btnCalcular.Size = new System.Drawing.Size(75, 23);
 			this.btnCalcular.TabIndex = 15;
 			this.btnCalcular.Text = "Calcular";
-			this.btnCalcular.UseVisualStyleBackColor = true;
+			this.btnCalcular.UseVisualStyleBackColor = false;
 			this.btnCalcular.Click += new System.EventHandler(this.BtnCalcularClick);
 			// 
 			// txtCelcius
@@ -73,10 +75,11 @@ namespace login
 			// 
 			// lblResultado
 			// 
-			this.lblResultado.Location = new System.Drawing.Point(118, 64);
+			this.lblResultado.Location = new System.Drawing.Point(90, 64);
 			this.lblResultado.Name = "lblResultado";
 			this.lblResultado.Size = new System.Drawing.Size(100, 23);
 			this.lblResultado.TabIndex = 13;
+
 			// 
 			// label2
 			// 
@@ -101,7 +104,7 @@ namespace login
 			this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
 			this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
 			this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(255)))), ((int)(((byte)(192)))));
-			this.ClientSize = new System.Drawing.Size(350, 168);
+			this.ClientSize = new System.Drawing.Size(273, 168);
 			this.Controls.Add(this.btnCalcular);
 			this.Controls.Add(this.txtCelcius);
 			this.Controls.Add(this.lblResultado);

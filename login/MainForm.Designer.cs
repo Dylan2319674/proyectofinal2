@@ -45,17 +45,18 @@ namespace login
 			// 
 			// btnEntrar
 			// 
-			this.btnEntrar.Location = new System.Drawing.Point(183, 132);
+			this.btnEntrar.BackColor = System.Drawing.Color.Lime;
+			this.btnEntrar.Location = new System.Drawing.Point(90, 123);
 			this.btnEntrar.Name = "btnEntrar";
 			this.btnEntrar.Size = new System.Drawing.Size(75, 23);
 			this.btnEntrar.TabIndex = 0;
 			this.btnEntrar.Text = "Entrar";
-			this.btnEntrar.UseVisualStyleBackColor = true;
+			this.btnEntrar.UseVisualStyleBackColor = false;
 			this.btnEntrar.Click += new System.EventHandler(this.BtnEntrarClick);
 			// 
 			// txtUsuario
 			// 
-			this.txtUsuario.Location = new System.Drawing.Point(160, 32);
+			this.txtUsuario.Location = new System.Drawing.Point(133, 32);
 			this.txtUsuario.Name = "txtUsuario";
 			this.txtUsuario.Size = new System.Drawing.Size(102, 20);
 			this.txtUsuario.TabIndex = 1;
@@ -63,7 +64,7 @@ namespace login
 			// 
 			// txtContraseña
 			// 
-			this.txtContraseña.Location = new System.Drawing.Point(162, 83);
+			this.txtContraseña.Location = new System.Drawing.Point(135, 79);
 			this.txtContraseña.Name = "txtContraseña";
 			this.txtContraseña.Size = new System.Drawing.Size(100, 20);
 			this.txtContraseña.TabIndex = 2;
@@ -71,16 +72,16 @@ namespace login
 			// lblUsuario
 			// 
 			this.lblUsuario.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-			this.lblUsuario.Location = new System.Drawing.Point(56, 33);
+			this.lblUsuario.Location = new System.Drawing.Point(24, 33);
 			this.lblUsuario.Name = "lblUsuario";
-			this.lblUsuario.Size = new System.Drawing.Size(100, 23);
+			this.lblUsuario.Size = new System.Drawing.Size(74, 23);
 			this.lblUsuario.TabIndex = 3;
 			this.lblUsuario.Text = "Usuario:";
 			// 
 			// lblContraseña
 			// 
 			this.lblContraseña.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-			this.lblContraseña.Location = new System.Drawing.Point(56, 80);
+			this.lblContraseña.Location = new System.Drawing.Point(24, 76);
 			this.lblContraseña.Name = "lblContraseña";
 			this.lblContraseña.Size = new System.Drawing.Size(100, 23);
 			this.lblContraseña.TabIndex = 4;
@@ -91,7 +92,7 @@ namespace login
 			this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
 			this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
 			this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(255)))), ((int)(((byte)(192)))));
-			this.ClientSize = new System.Drawing.Size(284, 261);
+			this.ClientSize = new System.Drawing.Size(253, 170);
 			this.Controls.Add(this.lblContraseña);
 			this.Controls.Add(this.lblUsuario);
 			this.Controls.Add(this.txtContraseña);
