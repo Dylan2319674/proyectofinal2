@@ -16,7 +16,7 @@ namespace login
     {
         int indiceImagen = 1;
         private ErrorProvider errorProvider1;
-		string conexion = "Server=localhost;Database=empleados;Uid=root;Pwd=231913;";
+		string conexion = "Server=localhost;Database=Empleados;Uid=root;Pwd=;";
 
         public Empleados()
         {
@@ -56,7 +56,6 @@ namespace login
 {
     bool valido = true;
 
-    // Validación con ErrorProvider
     if (TxtCodigoEmpleado.Text == "")
     {
         errorProvider1.SetError(TxtCodigoEmpleado, "Este campo es obligatorio");
@@ -182,8 +181,6 @@ namespace login
             pictureBox1.Image = null;
             return;
         }
-
-        // Liberar imagen anterior
         if (pictureBox1.Image != null)
         {
             pictureBox1.Image.Dispose();
@@ -236,7 +233,7 @@ namespace login
     if (indiceImagen > 7)
         indiceImagen = 1;
 
-    CargarImagen("imagen" + indiceImagen + ".jpg");
+    CargarImagen("imagen" + indiceImagen + ".jpeg");
 }
 		
 		void BtnRegresarClick(object sender, EventArgs e)
