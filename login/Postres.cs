@@ -15,8 +15,8 @@ namespace login
 {
 	public partial class Postres : Form
 	{
-		// CADENA DE CONEXIÓN (AJUSTA SI ES NECESARIO)
-		string conexion = "server=localhost;database=tu_basedatos;user=root;password=;";
+		
+		string conexion = "server=localhost;database=postres;user=root;password=231913;";
 
 		string[] productosDulces = {
 			"Pastel de Chocolate",

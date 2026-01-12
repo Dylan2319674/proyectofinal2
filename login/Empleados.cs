@@ -16,7 +16,7 @@ namespace login
     {
         int indiceImagen = 1;
         private ErrorProvider errorProvider1;
-		string conexion = "Server=localhost;Database=Empleados;Uid=root;Pwd=;";
+		string conexion = "Server=localhost;Database=Empleados;Uid=root;Pwd=231913;";
 
         public Empleados()
         {
